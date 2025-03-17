@@ -1,0 +1,114 @@
+#+title: Exploration des méthodologies de test d'applications
+#+subtitle: Veille technologique
+#+author: Cyprien PIERRE
+#+date:
+
+Continuous integrations rules
+1.  Always run commit tests locally before commiting
+2.  After commiting, always wait for the results of the testing pipeline
+3.  Fix or reverse failures within 10 minutes (start a clock, pomodoro)
+4.  Revert changes done by a teamate if it breaks the rules
+5.  Monitore your change throught the pipeline
+6.  Treat a broken build as a build sin (gamifying things)
+7.  Commit small but often
+8.  Maintain a fast commit feedback loop
+9.  Automate everything
+10. Take ownership of failures
+
+- Unit testing => Testing
+  - Most detailed
+  - Most computational efficient
+  - Write for every pieces of code
+  => To be integred in a TDD pipeline
+
+- Component testing
+
+Test Driven Development => Design
+- Path :
+  - Express intent in the form of code
+  - Test the test by running it and seeing it FAIL
+  - Create the minimum code to meet the needs of the tests
+  - Run it and see it PASS
+  - In a stable and passing state, REFACTOR test & code for quality & generality
+- Step by step :
+  - 
+
+Domain Driven Development
+=> Code is the simulation of the problem we try to solve
+
+idea : org-mode documents that describe behaviors & business logic ?
+
+End-to-end testing
+
+Microservices & test des API :
+- Contract Driven Testing 
+  => Specmatics & YAML
+  - Contract compatibility testing
+  - Backward compatibility
+  - Shared contracts specifications
+  - Zero code contract testing
+
+
+- Behavior Driven Design
+  => Cucumber, SpecFlow & Gherkins Language
+  - Specifications + Senarios
+
+  => Functionnal testing
+
+- Acceptance testing
+  - Executable specifications
+  - "Is my code releasable ?"
+  - Write before code !
+  - Only specifies what the system is ment to do
+  - At the verry heart of the test strategy
+  - Do note optimise
+  - Expensive in time to run
+  - Focus on general behavior, as a confirmation, in complement of unit tests
+  - To initiate and validate development of a feature
+  - To stabilize legacy system
+  - To replace manual regression testing
+    
+- Resiliance testing
+  
+- Integration testing => Not really neaded if acceptance test is well defined
+  - Here to fail faster
+
+- Regression testing
+
+- Load testing
+
+- Stress test
+
+- Security checks
+
+- Penetration testing
+
+Others
+- Approval test
+  - Verify the repetability of the code through the results
+  - Valuable for stability
+  - Great for UI stability
+  - Verify that nothing has changed
+
+- Manual testing
+  - Use humans for exploratory and usability testing (human in the loop)
+    - Exploratory test
+
+- Soak test
+- Sanity test
+- Smoke test
+
+Financial costs
+  Resource and network consumption
+
+Energy efficiency, carbon footprint
+
+DORA metrics => Research papers + the "Accelerate" book (sociologic)
+- Stability =is a measure of the quality of the code that we produce= https://www.youtube.com/watch?v=hbeyCECbLhk&list=PLwLLcwQlnXBwvH8Iqs9zqkbSWdvWoyX4v
+  - Change failure rate => Bug count
+  - Mean time to recovery => Bug count
+- Throughput =is a measure of the efficiency of your approach=
+  => Work on smaller changes
+  - Lead time for changes => Features
+  - Deployment frequency [x]
+
